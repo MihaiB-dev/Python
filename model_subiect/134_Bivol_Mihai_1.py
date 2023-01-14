@@ -9,7 +9,11 @@ def citire_numere(file): #a)
 
 def prelucrare_lista(lista): #b)
     for poz in range(len(lista)):
-        lista[poz].remove(min(lista[poz]))
+        minim = min(lista[poz])
+        counter_min = lista[poz].count(minim)
+        for x in range(counter_min):
+            lista[poz].remove(minim)
+            
     m = min([len(lista[poz]) for poz in range(len(lista))])
     for poz in range(len(lista)):
         lung_rand = len(lista)
